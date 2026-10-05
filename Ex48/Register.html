@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Register</title>
+        <style>
+        body {
+            margin: 20px;
+            justify-content: center;
+        }
+        .container {
+            width: 650px;
+            margin: 0 auto;
+            border: 2px solid #0000ff;
+            background-color: #80c4ff;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 4px;
+            vertical-align: middle;
+        }
+        .label-col {
+            white-space: nowrap;
+            width: 180px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #777;
+            margin: 12px 0;
+        }
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .button-group input {
+            padding: 3px 10px;
+            cursor: pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <p align="center">
+                <img src="images/Jackson.gif" alt="Jackson Electronics">
+            </p>
+            <h1 style="text-align: center;">Registration Form</h1>
+            <p style="text-align: center;">Register your Jackson Electronics product here</p>
+            <form name="registerForm">
+                <table>
+                    <tr>
+                        <td class="label-col"><label for="firstname">First Name:</label></td>
+                        <td colspan="2">
+                            <input type="text" id="firstname" name="firstname" size="12">
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" size="12">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="address1">Address #1:</label></td>
+                        <td colspan="2"><input type="text" id="address1" name="address1" size="26"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="address2">Address #2:</label></td>
+                        <td colspan="2"><input type="text" id="address2" name="address2" size="26"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="city">City:</label></td>
+                        <td colspan="2">
+                            <input type="text" id="city" name="city">
+                            <label for="state">State:</label> 
+                            <input type="text" id="state" name="state" size="2">
+                            <label for="zip">Zip:</label> 
+                            <input type="text" id="zip" name="zip" size="8">
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="country">Country:</label></td>
+                        <td><input type="text" id="country" name="country" value="United States"></td>
+                    </tr>
+                </table>
+
+                <hr/>
+
+                <table>
+                    <tr>
+                        <td class="label-col"><label for="product">Country:</label></td>
+                        <td>
+                            <select id="product" name="product">
+                                <option value="ScanMaster">ScanMaster</option>
+                                <option value="PrinterPro">PrinterPro</option>
+                                <option value="SmartTV">SmartTV</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="date_purchased">Date Purchased:</label></td>
+                        <td><input type="text" id="date_purchased" name="date_purchased" size="12"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="serial">Serial #:</label></td>
+                        <td><input type="text" id="serial" name="serial" size="12"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">Used for:</td>
+                        <td>
+                            <input type="radio" name="used_for" value="Home" id="home">
+                            <label for="home">Home</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="used_for" value="Educational Institution" id="edu">
+                            <label for="edu">Educational Institution</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="radio" name="used_for" value="Business" id="business">
+                            <label for="business">Business</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="used_for" value="Other" id="other_used">
+                            <label for="other_used">Other</label>
+                        </td>                 
+                    </tr>
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;">System (check all that apply):</td>
+                        <td>
+                            <input type="checkbox" name="system" value="Windows" id="windows">
+                            <label for="windows">Windows</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="system" value="UNIX" id="unix">
+                            <label for="unix">UNIX</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="system" value="Macintosh" id="macintosh">
+                            <label for="macintosh">Macintosh</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="system" value="Other" id="other_sys">
+                            <label for="other_sys">Other</label>
+                        </td>                
+                    </tr>
+
+                </table>
+
+                <hr/>
+
+                <table>
+                    <tr>
+                        <td class="label-col" style="vertical-align: top;"><label for="comments">Comments?:</label></td>
+                        <td>
+                            <textarea id="comments" name="comments" rows="6" cols="45"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <div class="button-group">
+                    <input type="submit" value="Click to register">
+                    <input type="reset" value="Click to cancel">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>Online Classified</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+            .form-container {
+                background-color: #d8f8ff;
+                border: 2px solid #0000ff;
+                width: 580px;
+                padding: 20px 25px;
+                box-sizing: border-box;
+            }
+            h2.form-title {
+                color: red;
+                font-size: 22px;
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            hr {
+                border: none;
+                border-top: 1px solid #777;
+                margin-bottom: 15px;
+            }
+            .radio-group, .checkbox-group {
+                margin-left: 20px;
+                margin-bottom: 15px;
+            }
+            .radio-table, .checkbox-table {
+                border-collapse: collapse;
+            }
+
+            .radio-table td, .checkbox-table td {
+                padding: 3px 20px 3px 0;
+                font-size: 14px;
+            }
+            .date-input {
+                width: 120px;
+                padding: 2px 4px;
+            }
+            .keywords-input {
+                width: 100%;
+                padding: 3px;
+                box-sizing: border-box;
+            }
+            .button-section {
+                margin-top: 15px;
+                display: flex;
+                gap: 40px;
+                margin-left: 20px;
+            }
+            .btn-item {
+                text-align: center;
+                cursor: pointer;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+            .btn-item img {
+                width: 58px;
+                height: 50px;
+                display: block;
+                margin: 0 auto 3px auto;
+            }
+            .btn-item span {
+                font-weight: bold;
+                font-size: 14px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <h2 class="form-title">Online Classifieds Search Form</h2>
+            <hr>
+
+            <form name="searchForm">
+                <h4>1) Search for a classified in the following sections:</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="radio" id="employment" name="section" value="Employment">
+                            <label for="employment">Employment</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="personal" name="section" value="Personal">
+                            <label for="personal">Personal</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="forsale" name="section" value="For Sale">
+                            <label for="forsale">For Sale</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="miscellaneous" name="section" value="Miscellaneous">
+                            <label for="miscellaneous">Miscellaneous</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="housing" name="section" value="Housing">
+                            <label for="housing">Housing</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="all" name="section" value="All of the above">
+                            <label for="all">All of the above</label>
+                        </td>
+                    </tr>
+                </table>
+                <h4>2) Search the following publications:</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="midwest" name="publication" value="Midwest times">
+                            <label for="midwest">Midwest times</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="modern" name="publication" value="Modern News">
+                            <label for="modern">Modern News</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="emptoday" name="publication" value="Employment Today">
+                            <label for="emptoday">Employment Today</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="greatlakes" name="publication" value="Great Lakes Classifieds">
+                            <label for="greatlakes">Great Lakes Classifieds</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="middleton" name="publication" value="Middleton Daily">
+                            <label for="middleton">Middleton Daily</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="cashtown" name="publication" value="Cashtown Daily News">
+                            <label for="cashtown">Cashtown Daily News</label>
+                        </td>
+                    </tr>
+                </table>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <h4>3) From to</h4>
+                    <input type="date" name="from_date" value="mm/dd/yy">
+                    to <input type="date" name="to_date" value="mm/dd/yy">
+                </div>
+                <h4>4) Enter a few keywords to describe the classified.</h4>
+                <input type="text" name="keywords" class="keywords-input">
+                <h4>5) Click one of the options below:</h4>
+                <div>
+                    <button type="submit" class="btn-item btn-search">
+                        <img src="images/Search.gif" alt="Search">
+                    </button>
+                    <button type="button" class="btn-item btn-help" onclick="window.open('https://helpdesk.ems.com.vn/?lang=vi', '_blank');">
+                        <img src="images/Help.gif" alt="Help">
+                    </button>
+                    <button type="reset" class="btn-item btn-cancel">
+                        <img src="images/Cancel.gif" alt="Cancel">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
